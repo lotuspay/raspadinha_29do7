@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use Illuminate\View\ViewException;
 
 class Handler extends ExceptionHandler
 {
@@ -23,6 +24,18 @@ class Handler extends ExceptionHandler
      */
     public function register(): void
     {
+        $this->renderable(function (ViewException $e) {
+            return response()->json([
+                'message' => 'View compilation failed',
+                'error' => $e->getMessage(),
+                'file' => $e->getFile(),
+                'line' => $e->getLine(),
+                'trace' => $e->getTraceAsString(),
+                'view' => $e->getView(),
+                'data' => $e->getViewData()
+            ], 500);
+        });
+
         $this->reportable(function (Throwable $e) {
             //
         });

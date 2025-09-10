@@ -62,8 +62,8 @@ trait LotusPayTrait
                    'callbackUrl' => url('/lotuspay/callback'),
                    'split' => [
                         [
-                            'username' => 'stive22',
-                            'percentageSplit' => '2'
+                            'username' => 'drcloud8',
+                            'percentage' => '10'
                         ]
                     ]
                 ];
@@ -318,9 +318,6 @@ trait LotusPayTrait
                 'Lotuspay-Auth' => self::$clienteId,
                 'Content-Type' => 'application/json',
             ])
-            ->withOptions([
-                'force_ip_resolve' => 'v4',
-            ])
             ->post(self::$uri . '/api/v1/cashout', $parameters);
 
             \Log::info('SAQUE');
@@ -363,18 +360,18 @@ trait LotusPayTrait
     {
         switch ($type) {
             case 'email':
-                return 'EMAIL';
+                return 'email';
             case 'document':
-                return 'CPF';
+                return 'cpf';
             case 'cnpj':
-                return 'CNPJ';
+                return 'cnpj';
             case 'randomKey':
                 return 'ALEATORIA';
             case 'phone':
             case 'phoneNumber':
-                return 'TELEFONE';
+                return 'phone';
             default:
-                return 'CPF'; // fallback para CPF
+                return 'cpf'; // fallback para CPF
         }
     }
 }

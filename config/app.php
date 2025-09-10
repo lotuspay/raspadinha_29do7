@@ -174,6 +174,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\Filament\AdminPanelProvider::class,
         App\Providers\Filament\AffiliatePanelProvider::class,
+        App\Providers\FilamentFormsServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
     ])->toArray(),
 
