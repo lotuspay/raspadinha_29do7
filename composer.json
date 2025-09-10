@@ -19,6 +19,7 @@
         "barryvdh/laravel-dompdf": "^3.1",
         "creagia/filament-code-field": "^2.0",
         "filament/filament": "^3.1",
+        "filament/forms": "^3.3",
         "filament/widgets": "^3.1",
         "guzzlehttp/guzzle": "^7.2",
         "jackiedo/dotenv-editor": "^2.1",

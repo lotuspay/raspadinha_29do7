@@ -16,9 +16,6 @@ use App\Models\Order;
 use App\Models\GamesKey;
 use Illuminate\Support\Facades\Http;
 
-// Include debug routes
-require __DIR__.'/debug.php';
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
