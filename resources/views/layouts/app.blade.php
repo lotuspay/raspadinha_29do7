@@ -5,34 +5,34 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="theme-color" content="#d58c00">  
-        <link rel="icon" type="image/png" sizes="192x192" href="https://raspa.bggames.site/storage/uploads/pbP7W9bKZmZBKOJjH57iaqG538RiKUzTBjueUzVe.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('/storage/uploads/pbP7W9bKZmZBKOJjH57iaqG538RiKUzTBjueUzVe.png') }}">
       
       <!-- Meta Tags Essenciais -->
-        <title>RaspouGanhou - A raspadinha número 1 do Brasil</title>
-        <meta name="description" content="Jogue na CorujaBET e descubra o melhor cassino online ao vivo! Aposte em esportes e cassino com bônus exclusivos. Depósitos rápidos via Pix.">
+        <title>{{ env('APP_NAME') }} - A raspadinha número 1 do Brasil</title>
+        <meta name="description" content="Jogue na {{ env('APP_NAME') }} e descubra o melhor cassino online ao vivo! Aposte em esportes e cassino com bônus exclusivos. Depósitos rápidos via Pix.">
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="RaspouGanhou - A raspadinha número 1 do Brasil">
-        <meta property="og:description" content="Raspe na RaspouGanhou! A raspadinha número 1 do Brasil. Depósitos via Pix e saques instantâneos.">
-        <meta property="og:image" content="https://raspa.bggames.site/storage/uploads/pbP7W9bKZmZBKOJjH57iaqG538RiKUzTBjueUzVe.png">
-        <meta property="og:url" content="https://corujabet.site">
-        <meta property="og:site_name" content="Coruja BET">
+        <meta property="og:title" content="{{ env('APP_NAME') }} - A raspadinha número 1 do Brasil">
+        <meta property="og:description" content="Raspe na {{ env('APP_NAME') }}! A raspadinha número 1 do Brasil. Depósitos via Pix e saques instantâneos.">
+        <meta property="og:image" content="{{ asset('/storage/uploads/pbP7W9bKZmZBKOJjH57iaqG538RiKUzTBjueUzVe.png') }}">
+        <meta property="og:url" content="{{ url('/') }}">
+        <meta property="og:site_name" content="{{ env('APP_NAME') }}">
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="RaspouGanhou - A raspadinha número 1 do Brasil">
-        <meta name="twitter:description" content="Entre no mundo das apostas com CorujaBET! Cassino ao vivo, jogos exclusivos e bônus especiais para novos jogadores.">
-        <meta name="twitter:image" content="https://raspa.bggames.site/storage/uploads/pbP7W9bKZmZBKOJjH57iaqG538RiKUzTBjueUzVe.png">
+        <meta name="twitter:title" content="{{ env('APP_NAME') }} - A raspadinha número 1 do Brasil">
+        <meta name="twitter:description" content="Entre no mundo das apostas com {{ env('APP_NAME') }}! Cassino ao vivo, jogos exclusivos e bônus especiais para novos jogadores.">
+        <meta name="twitter:image" content="{{ asset('/storage/uploads/pbP7W9bKZmZBKOJjH57iaqG538RiKUzTBjueUzVe.png') }}">
 
         <!-- SEO Keywords -->
-        <meta name="keywords" content="Cassino online, apostas esportivas, jogos de azar, slots, roleta, blackjack, poker, cassino ao vivo, bônus cassino, CorujaBET, apostas com Pix">
+        <meta name="keywords" content="Cassino online, apostas esportivas, jogos de azar, slots, roleta, blackjack, poker, cassino ao vivo, bônus cassino, {{ env('APP_NAME') }}, apostas com Pix">
 
         <!-- Robots (Indexação) -->
         <meta name="robots" content="noindex, nofollow">
 
         <!-- Canonical -->
-        <link rel="canonical" href="https://corujabet.site">
+        <link rel="canonical" href="{{ url('/') }}">
 
         @php $setting = \Helper::getSetting() @endphp
         @if(!empty($setting['software_favicon']))
