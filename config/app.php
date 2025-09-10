@@ -161,6 +161,7 @@ return [
          */
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
+        Filament\Forms\FormsServiceProvider::class,
 
         \App\Providers\FilamentServiceProvider::class,
         LaravelLegends\PtBrValidator\ValidatorProvider::class,
